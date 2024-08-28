@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(225, 169, 90, 0.807);
+
+}
+::-webkit-scrollbar-thumb{
+    height: 0.6rem;
+    width: 0.3rem;
+    background: orange;
+    border-radius: 0.50rem;
+}
+
+
+:root{
+    --background-color: rgb(38, 35, 35);
+    --background: rgb(255, 255, 255);
+    --navbar-color:rgb(249, 194, 91);
+    --text-color: whitesmoke;
+    --button-color: rgb(255, 159, 85);
+}
+
+body{
+    background: linear-gradient(to top, rgb(244, 193, 142), lightyellow);
+    min-width: 100%;
+}
+.logo img{
+    padding-top: 0.4rem;
+    width: 4rem;
+    height: 4rem;
+}
+.header{    
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+   /* background-color: var(--navbar-color);*/
+   flex-wrap: wrap;
+}
+
+.nav-links ul{
+    margin: 1rem;
+}
+.nav-links a{
+    font-size: 0.8rem;
+    list-style-type:none !important;
+    display: inline;
+    margin: 0.29rem;
+    border-style: none;
+    text-decoration: none;
+    color: var(--background-color);
+    
+}
+
+.nav-links a:hover{
+    border-style: solid;
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.2rem;
+    background-color: var(--button-color);
+    color: rgb(24, 24, 24);
+    transition: background-color 0.5s ease-out;
+    box-shadow: 0px 3px 4px 2px rgba(100, 94, 94, 0.97);
+    opacity: 0.8;
+    
+}
+
+.user a{
+    margin: 0.4rem;
+    text-decoration: none;
+    font-size:medium;
+}
+
+.register{
+    border-style: solid;
+    border: none;
+    border-radius: 0.15rem;
+    background-color: rgb(255, 128, 0);
+    padding: 0.4rem;
+
+}
+
+.hero{
+    margin: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.image img{
+    height: 20rem;
+    width: 38rem;
+    margin-left: 28rem;
+    margin-top: -14rem;
+}
+
+.hero-welcome h1{
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(to right, rgb(244, 167, 25), rgb(255, 230, 0));
+    background-clip: text;
+    color: transparent;
+    line-height: 6rem;
+}
+
+.hero-welcome p{
+    margin-top: 1rem;
+    font-weight: 700;
+    font-style: oblique;
+    margin-bottom: 2rem;
+}
+
+.hero-welcome a{
+    text-decoration: none;
+    color: white;
+    border-style: solid;
+    border-radius: 0.1rem;
+    border: none;
+    /*border-color: var(--button-color);*/
+    padding: 0.2rem;
+    position: relative;
+    background-color: lightslategrey;
+}
+
+.hero-welcome a:hover{
+    box-shadow: 1px 3px 3px 2px rgba(100, 94, 94, 0.97);
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.hero-welcome a::after, .hero-welcome a::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),#ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left:50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 0.2rem;
+    border-radius: 0.1rem;
+    animation: 2s spin linear infinite;
+}
+
+.hero-welcome a::before{
+    filter:blur(1rem);
+    opacity: 0.5;
+    
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.location-details h2{
+    margin: 2rem 0 1.8rem 6rem;
+    background: linear-gradient(to right, #f19c5b, #f8e059);
+    background-clip: text;
+    color: transparent;
+}
+.location-details form{
+    font-size: 0.98rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.location-details label{
+    margin: 0.7rem;
+}
+
+.location-details .search{
+    margin-left: 0.9rem;
+}
+
+.location-details select{
+    color: orange;
+    border: none;
+    font-size: 0.95rem;
+    border-radius: 0.25rem;
+}
+
+.location-details input{
+    color: var(--button-color);
+    border: none;
+    font-size: 0.95rem;
+    border-radius: 0.25rem;
+}
+
+.location-details option{
+    color: black;
+}
+.search{
+    height: 2rem;
+    width: 4rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    background-color: orange;
+    border: none;
+}
+
+.search:hover{
+    transform: scale(1.1);
+}
+
+.about{
+    margin: 6rem;
+    padding-top: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us{
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: 900;
+    background: linear-gradient(to right, #fc6d00, #e5cf57);
+    background-clip: text;
+    color: transparent;
+    border-bottom: 1px solid black;
+}
+
+.service{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service p{
+    font-size: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    margin-left: -1.78rem;
+}
+
+.service img{
+    margin: 7.5rem 0 0 0.2rem;
+    width: 4.3rem;
+    filter: drop-shadow(0 0.4rem 0.75rem orange);
+}
+
+.vehi-head{
+    text-align: center;
+    margin: 10rem;
+    color: black;
+    line-height: 1.2rem;
+}
+
+.vehi-head h3{
+    font-weight: 900;
+    background: linear-gradient(to right, #fc6d00, #e5cf57);
+    background-clip: text;
+    color: transparent;
+}
+.vehicle-class{
+    margin: 7rem 7rem 0rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+table {
+    width: 16.5rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0;
+}
+
+.car-name th{
+    border: none;
+}
+
+.car-name td{
+    border: none;
+}
+
+td:hover{
+    background: rgb(244, 47, 47);
+}
+td{
+    border: 0.1rem solid #fffbfb;
+    padding: 0.1rem;
+    text-align: center;
+}
+
+th{
+    border: 0.1rem solid #fffbfb;
+    background: rgb(249, 113, 64);
+    padding: 0.1rem;
+    text-align: center;
+}
+
+img{
+    width: 20rem;
+}
+
+.regi{
+    font-size: 1.3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    width: 10rem;
+    color: black;
+    padding: 0.4rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    margin-left: 52.5rem;
+    border-radius: 0.20rem;
+    border: none;
+    background: orangered;
+    box-shadow: 1px 3px 3px 2px rgba(247, 70, 5, 0.97);
+}
+
+
+.test-head{
+    text-align: center;
+    margin: 6rem 0 0 0;
+}
+
+.test-2{
+    background: linear-gradient(to right, #fc6d00, #e5cf57);
+    background-clip: text;
+    color: transparent;
+    border-bottom: 1px solid black;
+    margin: 0 6rem 0 6rem;
+}
+
+
+.test-head h5{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.testimonial-container {
+    width: 30rem;
+    margin: 3rem 3rem 0 21.5rem; 
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.slideshow-container{
+    width: 20rem;
+    box-sizing: border-box;
+    padding: 1.2rem 1.7rem;
+}
+
+
+.testimonial-slide {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30rem;
+    text-align: center;
+    padding: 1.2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border-radius: 0.25rem;
+    transition: opacity 1s ease-in-out;
+}
+
+.testimonial-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 1em;
+    color: #555;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+
+.contact{
+    margin: 6rem 0 0 0;
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.contact h2{
+    margin: 6rem;
+    text-align: center;
+    font-weight: 900;
+    background: linear-gradient(to right, #fc6d00, #e5cf57);
+    background-clip: text;
+    color: transparent;
+    border-bottom: 1px solid black;
+    
+}
+
+.contact-info{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    color: black;
+}
+
+.contact-info a{
+    color: black;
+    text-decoration: none;
+    word-spacing: 1rem;
+}
+
+iframe{
+    margin-top: -10rem;
+    margin-left: 28rem;
+    width: 60%;
+    border: 1px solid #ccc;
+}
