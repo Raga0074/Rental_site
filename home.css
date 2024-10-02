@@ -45,8 +45,12 @@ body{
     display: flex;
     justify-content:space-around;
     align-items: center;
-   /* background-color: var(--navbar-color);*/
-   flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 3px;
+    z-index: 1;
+
+
 }
 
 .nav-links ul{
@@ -289,6 +293,7 @@ table {
     width: 16.5rem;
     margin-bottom: 2rem;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .car-name th{
@@ -403,39 +408,50 @@ img{
 
 
 .contact{
-    margin: 6rem 0 0 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
     align-items: center;
     justify-content: center;
+    border: solid;
+    background: rgb(10, 9, 9);
+
 }
 .contact h2{
-    margin: 6rem;
-    text-align: center;
+    margin: 10px;
+    padding-bottom: 1rem;
+    text-align: left;
     font-weight: 900;
     background: linear-gradient(to right, #fc6d00, #e5cf57);
     background-clip: text;
     color: transparent;
-    border-bottom: 1px solid black;
+
     
 }
 
 .contact-info{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 100;
     margin-bottom: 2rem;
     margin-left: 2rem;
-    color: black;
+    color: white;
 }
 
 .contact-info a{
-    color: black;
+    color: white;
     text-decoration: none;
     word-spacing: 1rem;
 }
 
 iframe{
-    margin-top: -10rem;
+    margin-top: -14rem;
     margin-left: 28rem;
+    padding-bottom: 1rem;
     width: 60%;
     border: 1px solid #ccc;
+}
+
+.footer{
+    text-align: center;
+    font-size: small;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
